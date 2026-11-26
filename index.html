@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="id" style="scroll-behavior:smooth;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pelatihan Bekam Sinergi Medis Bersertifikat — Penawaran Resmi &amp; Terpercaya</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus%20Jakarta%20Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; font-family: 'Plus Jakarta Sans', sans-serif; background-color: #ffffff; color: #0f172a; overflow-x: hidden; }
+        @keyframes musaPulseAttention {
+            0%, 100% { transform: scale(1); filter: brightness(1); }
+            50% { transform: scale(1.035); filter: brightness(1.08); box-shadow: 0 0 22px rgba(16, 185, 129, 0.45); }
+        }
+        @keyframes musaTextPulseOnly {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.72; transform: scale(1.015); }
+        }
+        @keyframes musaTickerColorCycle {
+            0%, 49% { color: var(--musa-ticker-color-a); opacity: 1; }
+            50%, 99% { color: var(--musa-ticker-color-b); opacity: 0.35; }
+            100% { color: var(--musa-ticker-color-a); opacity: 1; }
+        }
+        @keyframes musaTickerColorCycleReduced {
+            from { color: var(--musa-ticker-color-a); }
+            to { color: var(--musa-ticker-color-b); }
+        }
+        .musa-ticker-color-cycle {
+            animation: musaTickerColorCycle var(--musa-ticker-flash-speed, 1.2s) steps(1, end) infinite;
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .musa-ticker-color-cycle {
+                animation: musaTickerColorCycleReduced 3s ease-in-out infinite alternate !important;
+            }
+        }
+        .musa-pulse-active { animation: musaPulseAttention 1.5s infinite ease-in-out; }
+        h1.musa-pulse-active, h2.musa-pulse-active, h3.musa-pulse-active, h4.musa-pulse-active, p.musa-pulse-active {
+            animation: musaTextPulseOnly 1.5s infinite ease-in-out;
+            box-shadow: none !important;
+        }
+        .musa-hover-active { transition: transform 0.22s ease, box-shadow 0.22s ease, filter 0.22s ease !important; }
+        .musa-hover-active:hover { transform: translateY(-3px) scale(1.02) !important; box-shadow: 0 12px 26px -6px rgba(16, 185, 129, 0.38) !important; filter: brightness(1.06); }
+        .musa-glass-active { background: rgba(255,255,255,.24) !important; border: 1px solid rgba(255,255,255,.58) !important; box-shadow: 0 10px 30px rgba(15,23,42,.14) !important; -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); }
+        .musa-glass-active > * { background-color: rgba(255,255,255,.56) !important; border: 1px solid rgba(255,255,255,.5) !important; box-shadow: 0 8px 24px rgba(15,23,42,.1) !important; -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); }
+        .musa-reveal-item { transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1); }
+        .musa-reveal-hidden.rev-fade-up { opacity: 0; transform: translateY(24px); }
+        .musa-reveal-hidden.rev-zoom-in { opacity: 0; transform: scale(0.94); }
+        .musa-reveal-hidden.rev-slide-left { opacity: 0; transform: translateX(-26px); }
+        .musa-reveal-hidden.rev-slide-right { opacity: 0; transform: translateX(26px); }
+        .musa-reveal-visible { opacity: 1 !important; transform: none !important; }
+        @media (max-width: 768px) {
+            h1 { font-size: clamp(20px, 6vw, 24px) !important; line-height: 1.25 !important; }
+            h2 { font-size: clamp(19px, 5.8vw, 24px) !important; line-height: 1.28 !important; }
+            .musa-grid-2, .musa-grid-3, .musa-grid-4 {
+                grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)) !important;
+                gap: 12px !important;
+            }
+            .musa-footer-columns {
+                grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)) !important;
+                gap: 12px !important;
+            }
+            .musa-section-grid {
+                grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)) !important;
+                gap: 14px !important;
+            }
+            .musa-export-section, .musa-export-widget {
+                padding-left: 12px !important;
+                padding-right: 12px !important;
+                overflow-wrap: anywhere;
+            }
+            .musa-export-section img, .musa-export-widget img {
+                max-width: 100%;
+                height: auto !important;
+            }
+            .musa-nav-inner { flex-wrap: nowrap !important; gap: 8px !important; }
+            .musa-nav-brand { max-width: 46% !important; min-width: 0 !important; }
+            .musa-nav-brand-logo { height: 34px !important; max-height: 34px !important; max-width: 76px !important; width: auto !important; object-fit: contain !important; flex-shrink: 1 !important; }
+            .musa-nav-links-desktop { display: none !important; }
+            .musa-nav-mobile-btn { display: inline-flex !important; }
+            .musa-nav-brand-text { font-size: 14px !important; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 130px; }
+            .musa-nav-cta { padding: 7px 10px !important; font-size: 11px !important; white-space: nowrap; }
+            .musa-cd-grid { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; gap: 6px !important; }
+            .musa-cd-box { min-width: 0 !important; padding: 8px 4px !important; }
+            .musa-cd-num { font-size: 18px !important; }
+            .musa-cd-lbl { font-size: 9px !important; }
+        }
+        
+    </style>
+</head>
+<body>
+
+                <div id="musaReadingProgress" style="position:fixed;top:0;left:0;height:4px;width:0%;background:linear-gradient(90deg,#059669,#d97706);z-index:10000;transition:width 0.12s ease;"></div>
+                <script>
+                    window.addEventListener('scroll', function(){
+                        var docH = document.documentElement.scrollHeight - window.innerHeight;
+                        var pct = docH > 0 ? Math.min(100, Math.max(0, (window.scrollY / docH) * 100)) : 0;
+                        var bar = document.getElementById('musaReadingProgress');
+                        if (bar) bar.style.width = pct + '%';
+                    }, { passive: true });
+                </script>
+<section id="section-1" class="musa-export-section " style="padding-top:0px;padding-bottom:0px;padding-left:0px;padding-right:0px;background-color:#0f1623;text-align:left">
+                        <div class="musa-grid-1 musa-section-grid" style="max-width:1140px;margin:0 auto;display:grid;grid-template-columns:repeat(1,minmax(0,1fr));gap:24px;">
+                            <div><div id="dom_el_i0w5hkha" class="musa-export-widget " style="padding-top:14px;padding-bottom:14px;padding-left:16px;padding-right:16px;background-color:#ffffff;text-align:left"><nav style="border-bottom:1px solid rgba(148,163,184,0.25);padding:8px 12px;">
+                        <div class="musa-nav-inner" style="max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px;">
+                            <div style="display:flex;align-items:center;gap:8px;min-width:0;">
+                                <button type="button" class="musa-nav-mobile-btn" onclick="document.getElementById('navDrawer_el_i0w5hkha').style.display='flex'" style="display:none;padding:6px 9px;border-radius:8px;border:1px solid #cbd5e1;background:#f8fafc;color:#0f172a;font-weight:700;font-size:13px;cursor:pointer;flex-shrink:0;">☰</button>
+                                <div class="musa-nav-brand" style="display:flex;align-items:center;gap:8px;min-width:0;flex:0 1 auto;max-width:100%;">
+                        
+                        <span class="musa-nav-brand-text" style="font-weight:800;font-size:18px;letter-spacing:-0.02em;color:#059669;">KEROYA TERAPI CENTER</span>
+                    </div>
+                            </div>
+                            <div class="musa-nav-links-desktop" style="display:flex;flex-wrap:wrap;align-items:center;gap:18px;">
+                                <a href="#tentang"  style="font-size:14px;font-weight:600;color:inherit;text-decoration:none;opacity:0.88;">Tentang</a><a href="#dom_el_dzq4gy37"  style="font-size:14px;font-weight:600;color:inherit;text-decoration:none;opacity:0.88;">Lokasi</a>
+                            </div>
+                            <a href="https://wa.me/6287876042557?text=Halo%20Admin%2C%20saya%20ingin%20mendaftar%20Pelatihan%20Bekam%20Sinergi%20Medis%20Bersertifikat.%20Mohon%20info%20jadwal%20dan%20ketersediaan%20kuotanya." target="_blank" onclick="" class="musa-nav-cta " style="padding:9px 16px;border-radius:10px;background:#059669;color:#ffffff;font-weight:700;font-size:13px;text-decoration:none;display:inline-flex;align-items:center;gap:6px;flex-shrink:0;">
+                            <i class="fa-brands fa-whatsapp"></i> <span>Konsultasi Keluhan</span>
+                        </a>
+                        </div>
+                        <div id="navDrawer_el_i0w5hkha" onclick="if(event.target===this)this.style.display='none'" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.55);">
+                        <div style="width:270px;max-width:82vw;height:100%;background:#ffffff;color:#0f172a;padding:24px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:8px 0 30px rgba(0,0,0,0.2);">
+                            <div>
+                                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;padding-bottom:14px;border-bottom:1px solid #e2e8f0;">
+                                    <div class="musa-nav-brand" style="display:flex;align-items:center;gap:8px;min-width:0;flex:0 1 auto;max-width:100%;">
+                        
+                        <span class="musa-nav-brand-text" style="font-weight:800;font-size:18px;letter-spacing:-0.02em;color:#059669;">KEROYA TERAPI CENTER</span>
+                    </div>
+                                    <button type="button" onclick="document.getElementById('navDrawer_el_i0w5hkha').style.display='none'" style="background:none;border:none;font-size:18px;cursor:pointer;color:#64748b;">✕</button>
+                                </div>
+                                <div style="display:flex;flex-direction:column;gap:12px;">
+                                    <a href="#tentang" onclick="document.getElementById('navDrawer_el_i0w5hkha').style.display='none'" style="padding:10px 12px;border-radius:8px;font-weight:600;font-size:15px;color:#1e293b;text-decoration:none;background:#f8fafc;">Tentang</a><a href="#dom_el_dzq4gy37" onclick="document.getElementById('navDrawer_el_i0w5hkha').style.display='none'" style="padding:10px 12px;border-radius:8px;font-weight:600;font-size:15px;color:#1e293b;text-decoration:none;background:#f8fafc;">Lokasi</a>
+                                </div>
+                            </div>
+                            <div><a href="https://wa.me/6287876042557?text=Halo%20Admin%2C%20saya%20ingin%20mendaftar%20Pelatihan%20Bekam%20Sinergi%20Medis%20Bersertifikat.%20Mohon%20info%20jadwal%20dan%20ketersediaan%20kuotanya." target="_blank" onclick="" class="musa-nav-cta " style="padding:9px 16px;border-radius:10px;background:#059669;color:#ffffff;font-weight:700;font-size:13px;text-decoration:none;display:inline-flex;align-items:center;gap:6px;flex-shrink:0;">
+                            <i class="fa-brands fa-whatsapp"></i> <span>Konsultasi Keluhan</span>
+                        </a></div>
+                        </div>
+                    </div>
+                    </nav></div><div id="dom_el_2me0zdtw" class="musa-export-widget " style="padding-top:16px;padding-bottom:16px;padding-left:16px;padding-right:16px;background-color:#ffffff;text-align:left"><div class="" style="position:relative;min-height:360px;overflow:hidden;border-radius:20px;background:#0f172a;color:#fff;box-shadow:0 14px 32px rgba(15,23,42,.2);">
+                    <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="dr. Ahmad Fauzi, M.Kes" onerror="this.src='https://placehold.co/700x700/e2e8f0/475569?text=Foto+Profil'"  style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;">
+                    <div style="position:absolute;left:12px;right:12px;bottom:12px;padding:16px;border:1px solid rgba(255,255,255,.28);border-radius:16px;background:rgba(15,23,42,.48);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);color:#fff;"><div><span style="display:inline-block;margin-bottom:8px;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.2);color:inherit;font-size:10px;font-weight:800;letter-spacing:.06em;">MENTOR UTAMA</span><h3 style="font-size:18px;font-weight:800;line-height:1.25;margin:0 0 5px;">dr. Ahmad Fauzi, M.Kes</h3><div style="font-size:13px;font-weight:700;color:#d97706;margin-bottom:10px;">Master Instruktur &amp; Praktisi Sinergi Medis</div><p style="font-size:14px;line-height:1.6;margin:0;opacity:.84;">Berpengalaman membimbing praktisi dan mentor di seluruh Indonesia.</p></div></div>
+                </div></div><div id="dom_el_3iasrpwu" class="musa-export-widget " style="padding-top:16px;padding-bottom:16px;padding-left:16px;padding-right:16px;text-align:left"><div class="" style="width:100%;padding:24px;border:1px solid #d9f99d;border-radius:20px;box-shadow:0 14px 34px rgba(77,124,15,.12);background:#f7fee7;color:#365314;">
+                        <form id="therapyBooking_el_3iasrpwu" onsubmit="submitTherapyBooking(event, 'therapyBooking_el_3iasrpwu')" data-sheet-endpoint="" data-form-type="therapy_booking" data-wa-number="6287876042557" data-enable-code="0" data-show-services="1" data-prefix="TRP-" style="display:flex;flex-direction:column;gap:14px;">
+                            <div>
+                                <h3 style="margin:0 0 6px;font-size:22px;font-weight:800;color:#365314;">Booking Terapi</h3>
+                                <p style="margin:0;color:#365314;opacity:.76;font-size:14px;line-height:1.6;">Pilih layanan terapi dan isi data untuk mengajukan booking.</p>
+                            </div>
+                            
+                            <div>
+                                <label for="therapyBooking_el_3iasrpwu_name" style="display:block;margin-bottom:5px;font-size:13px;font-weight:700;color:#365314;">Nama</label>
+                                <input id="therapyBooking_el_3iasrpwu_name" name="customerName" type="text" required autocomplete="name" autocapitalize="characters" oninput="this.value=this.value.toUpperCase()" placeholder="Nama lengkap" style="width:100%;padding:11px 13px;border:1px solid #d9f99d;border-radius:10px;background:#ffffff;color:#365314;font-size:14px;text-transform:uppercase;">
+                            </div>
+                            <div>
+                                <label for="therapyBooking_el_3iasrpwu_address" style="display:block;margin-bottom:5px;font-size:13px;font-weight:700;color:#365314;">Keluhan</label>
+                                <textarea id="therapyBooking_el_3iasrpwu_address" name="customerAddress" required rows="3" autocomplete="street-address" placeholder="Ceritakan Keluhan Anda" style="width:100%;padding:11px 13px;border:1px solid #d9f99d;border-radius:10px;background:#ffffff;color:#365314;font-size:14px;resize:vertical;"></textarea>
+                            </div>
+                            
+                            
+                            <fieldset style="min-width:0;margin:0;padding:12px;border:1px solid #d9f99d;border-radius:12px;">
+                                <legend style="width:100%;padding:0 5px;">
+                                    <span style="padding:0 5px;font-size:13px;font-weight:800;color:#365314;">Pilih Layanan</span>
+                                </legend>
+                                <div id="therapyBooking_el_3iasrpwu_services_content" data-therapy-services-content style="display:grid;gap:10px;">
+                                    <div style="position:relative;">
+                                <button type="button" data-therapy-dropdown-toggle aria-controls="therapyBooking_el_3iasrpwu_services_options" aria-expanded="false" onclick="event.stopPropagation();toggleTherapyServiceDropdown('therapyBooking_el_3iasrpwu')" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 13px;border:1px solid #d9f99d;border-radius:10px;background:#ffffff;color:#365314;font-size:14px;text-align:left;cursor:pointer;">
+                                    <span data-therapy-dropdown-summary style="min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">Pilih layanan</span><span data-therapy-dropdown-indicator aria-hidden="true" style="color:#4d7c0f;">▾</span>
+                                </button>
+                                <div id="therapyBooking_el_3iasrpwu_services_options" data-therapy-dropdown-options style="display:none;position:absolute;top:calc(100% + 4px);left:0;right:0;z-index:20;max-height:240px;overflow:auto;padding:8px;border:1px solid #d9f99d;border-radius:10px;background:#ffffff;box-shadow:0 12px 28px rgba(15,23,42,.16);">
+                                    <div style="display:grid;grid-template-columns:1fr;gap:8px;">
+                        <label style="display:flex;align-items:center;gap:8px;min-width:0;padding:10px 12px;border:1px solid #d9f99d;border-radius:12px;background:#ffffff;cursor:pointer;">
+                            <input type="checkbox" name="therapyService" value="Terapi Bekam" data-service-name="Terapi Bekam" data-price="150000" onchange="updateTherapyBookingTotal('therapyBooking_el_3iasrpwu')" style="width:17px;height:17px;accent-color:#4d7c0f;flex:0 0 auto;">
+                            <span style="display:flex;flex:1;min-width:0;align-items:center;justify-content:space-between;gap:6px;flex-wrap:nowrap;">
+                                <span title="Terapi Bekam" style="min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:12px;font-weight:700;color:#365314;">Terapi Bekam</span>
+                                <strong style="flex:0 0 auto;white-space:nowrap;font-size:12px;color:#4d7c0f;">Rp 150.000</strong>
+                            </span>
+                        </label>
+                        <label style="display:flex;align-items:center;gap:8px;min-width:0;padding:10px 12px;border:1px solid #d9f99d;border-radius:12px;background:#ffffff;cursor:pointer;">
+                            <input type="checkbox" name="therapyService" value="Pijat Relaksasi" data-service-name="Pijat Relaksasi" data-price="200000" onchange="updateTherapyBookingTotal('therapyBooking_el_3iasrpwu')" style="width:17px;height:17px;accent-color:#4d7c0f;flex:0 0 auto;">
+                            <span style="display:flex;flex:1;min-width:0;align-items:center;justify-content:space-between;gap:6px;flex-wrap:nowrap;">
+                                <span title="Pijat Relaksasi" style="min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:12px;font-weight:700;color:#365314;">Pijat Relaksasi</span>
+                                <strong style="flex:0 0 auto;white-space:nowrap;font-size:12px;color:#4d7c0f;">Rp 200.000</strong>
+                            </span>
+                        </label>
+                        <label style="display:flex;align-items:center;gap:8px;min-width:0;padding:10px 12px;border:1px solid #d9f99d;border-radius:12px;background:#ffffff;cursor:pointer;">
+                            <input type="checkbox" name="therapyService" value="Konsultasi Terapi" data-service-name="Konsultasi Terapi" data-price="50000" onchange="updateTherapyBookingTotal('therapyBooking_el_3iasrpwu')" style="width:17px;height:17px;accent-color:#4d7c0f;flex:0 0 auto;">
+                            <span style="display:flex;flex:1;min-width:0;align-items:center;justify-content:space-between;gap:6px;flex-wrap:nowrap;">
+                                <span title="Konsultasi Terapi" style="min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:12px;font-weight:700;color:#365314;">Konsultasi Terapi</span>
+                                <strong style="flex:0 0 auto;white-space:nowrap;font-size:12px;color:#4d7c0f;">Rp 50.000</strong>
+                            </span>
+                        </label>
+                        <label style="display:flex;align-items:center;gap:8px;min-width:0;padding:10px 12px;border:1px solid #d9f99d;border-radius:12px;background:#ffffff;cursor:pointer;">
+                            <input type="checkbox" name="therapyService" value="Bekam Basah" data-service-name="Bekam Basah" data-price="175000" onchange="updateTherapyBookingTotal('therapyBooking_el_3iasrpwu')" style="width:17px;height:17px;accent-color:#4d7c0f;flex:0 0 auto;">
+                            <span style="display:flex;flex:1;min-width:0;align-items:center;justify-content:space-between;gap:6px;flex-wrap:nowrap;">
+                                <span title="Bekam Basah" style="min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:12px;font-weight:700;color:#365314;">Bekam Basah</span>
+                                <strong style="flex:0 0 auto;white-space:nowrap;font-size:12px;color:#4d7c0f;">Rp 175.000</strong>
+                            </span>
+                        </label>
+                        <label style="display:flex;align-items:center;gap:8px;min-width:0;padding:10px 12px;border:1px solid #d9f99d;border-radius:12px;background:#ffffff;cursor:pointer;">
+                            <input type="checkbox" name="therapyService" value="Bekam Kering" data-service-name="Bekam Kering" data-price="120000" onchange="updateTherapyBookingTotal('therapyBooking_el_3iasrpwu')" style="width:17px;height:17px;accent-color:#4d7c0f;flex:0 0 auto;">
+                            <span style="display:flex;flex:1;min-width:0;align-items:center;justify-content:space-between;gap:6px;flex-wrap:nowrap;">
+                                <span title="Bekam Kering" style="min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:12px;font-weight:700;color:#365314;">Bekam Kering</span>
+                                <strong style="flex:0 0 auto;white-space:nowrap;font-size:12px;color:#4d7c0f;">Rp 120.000</strong>
+                            </span>
+                        </label>
+                        <label style="display:flex;align-items:center;gap:8px;min-width:0;padding:10px 12px;border:1px solid #d9f99d;border-radius:12px;background:#ffffff;cursor:pointer;">
+                            <input type="checkbox" name="therapyService" value="Bekam Api" data-service-name="Bekam Api" data-price="160000" onchange="updateTherapyBookingTotal('therapyBooking_el_3iasrpwu')" style="width:17px;height:17px;accent-color:#4d7c0f;flex:0 0 auto;">
+                            <span style="display:flex;flex:1;min-width:0;align-items:center;justify-content:space-between;gap:6px;flex-wrap:nowrap;">
+                                <span title="Bekam Api" style="min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:12px;font-weight:700;color:#365314;">Bekam Api</span>
+                                <strong style="flex:0 0 auto;white-space:nowrap;font-size:12px;color:#4d7c0f;">Rp 160.000</strong>
+                            </span>
+                        </label>
+                        <label style="display:flex;align-items:center;gap:8px;min-width:0;padding:10px 12px;border:1px solid #d9f99d;border-radius:12px;background:#ffffff;cursor:pointer;">
+                            <input type="checkbox" name="therapyService" value="Bekam Wajah" data-service-name="Bekam Wajah" data-price="140000" onchange="updateTherapyBookingTotal('therapyBooking_el_3iasrpwu')" style="width:17px;height:17px;accent-color:#4d7c0f;flex:0 0 auto;">
+                            <span style="display:flex;flex:1;min-width:0;align-items:center;justify-content:space-between;gap:6px;flex-wrap:nowrap;">
+                                <span title="Bekam Wajah" style="min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:12px;font-weight:700;color:#365314;">Bekam Wajah</span>
+                                <strong style="flex:0 0 auto;white-space:nowrap;font-size:12px;color:#4d7c0f;">Rp 140.000</strong>
+                            </span>
+                        </label>
+                        <label style="display:flex;align-items:center;gap:8px;min-width:0;padding:10px 12px;border:1px solid #d9f99d;border-radius:12px;background:#ffffff;cursor:pointer;">
+                            <input type="checkbox" name="therapyService" value="Bekam Kepala" data-service-name="Bekam Kepala" data-price="165000" onchange="updateTherapyBookingTotal('therapyBooking_el_3iasrpwu')" style="width:17px;height:17px;accent-color:#4d7c0f;flex:0 0 auto;">
+                            <span style="display:flex;flex:1;min-width:0;align-items:center;justify-content:space-between;gap:6px;flex-wrap:nowrap;">
+                                <span title="Bekam Kepala" style="min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:12px;font-weight:700;color:#365314;">Bekam Kepala</span>
+                                <strong style="flex:0 0 auto;white-space:nowrap;font-size:12px;color:#4d7c0f;">Rp 165.000</strong>
+                            </span>
+                        </label>
+                        <label style="display:flex;align-items:center;gap:8px;min-width:0;padding:10px 12px;border:1px solid #d9f99d;border-radius:12px;background:#ffffff;cursor:pointer;">
+                            <input type="checkbox" name="therapyService" value="Bekam Seluncur" data-service-name="Bekam Seluncur" data-price="155000" onchange="updateTherapyBookingTotal('therapyBooking_el_3iasrpwu')" style="width:17px;height:17px;accent-color:#4d7c0f;flex:0 0 auto;">
+                            <span style="display:flex;flex:1;min-width:0;align-items:center;justify-content:space-between;gap:6px;flex-wrap:nowrap;">
+                                <span title="Bekam Seluncur" style="min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:12px;font-weight:700;color:#365314;">Bekam Seluncur</span>
+                                <strong style="flex:0 0 auto;white-space:nowrap;font-size:12px;color:#4d7c0f;">Rp 155.000</strong>
+                            </span>
+                        </label>
+                        <label style="display:flex;align-items:center;gap:8px;min-width:0;padding:10px 12px;border:1px solid #d9f99d;border-radius:12px;background:#ffffff;cursor:pointer;">
+                            <input type="checkbox" name="therapyService" value="Pijat Refleksi" data-service-name="Pijat Refleksi" data-price="150000" onchange="updateTherapyBookingTotal('therapyBooking_el_3iasrpwu')" style="width:17px;height:17px;accent-color:#4d7c0f;flex:0 0 auto;">
+                            <span style="display:flex;flex:1;min-width:0;align-items:center;justify-content:space-between;gap:6px;flex-wrap:nowrap;">
+                                <span title="Pijat Refleksi" style="min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:12px;font-weight:700;color:#365314;">Pijat Refleksi</span>
+                                <strong style="flex:0 0 auto;white-space:nowrap;font-size:12px;color:#4d7c0f;">Rp 150.000</strong>
+                            </span>
+                        </label>
+                        <label style="display:flex;align-items:center;gap:8px;min-width:0;padding:10px 12px;border:1px solid #d9f99d;border-radius:12px;background:#ffffff;cursor:pointer;">
+                            <input type="checkbox" name="therapyService" value="Totok Punggung" data-service-name="Totok Punggung" data-price="135000" onchange="updateTherapyBookingTotal('therapyBooking_el_3iasrpwu')" style="width:17px;height:17px;accent-color:#4d7c0f;flex:0 0 auto;">
+                            <span style="display:flex;flex:1;min-width:0;align-items:center;justify-content:space-between;gap:6px;flex-wrap:nowrap;">
+                                <span title="Totok Punggung" style="min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:12px;font-weight:700;color:#365314;">Totok Punggung</span>
+                                <strong style="flex:0 0 auto;white-space:nowrap;font-size:12px;color:#4d7c0f;">Rp 135.000</strong>
+                            </span>
+                        </label>
+                        <label style="display:flex;align-items:center;gap:8px;min-width:0;padding:10px 12px;border:1px solid #d9f99d;border-radius:12px;background:#ffffff;cursor:pointer;">
+                            <input type="checkbox" name="therapyService" value="Totok Sinergi" data-service-name="Totok Sinergi" data-price="150000" onchange="updateTherapyBookingTotal('therapyBooking_el_3iasrpwu')" style="width:17px;height:17px;accent-color:#4d7c0f;flex:0 0 auto;">
+                            <span style="display:flex;flex:1;min-width:0;align-items:center;justify-content:space-between;gap:6px;flex-wrap:nowrap;">
+                                <span title="Totok Sinergi" style="min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:12px;font-weight:700;color:#365314;">Totok Sinergi</span>
+                                <strong style="flex:0 0 auto;white-space:nowrap;font-size:12px;color:#4d7c0f;">Rp 150.000</strong>
+                            </span>
+                        </label>
+                        <label style="display:flex;align-items:center;gap:8px;min-width:0;padding:10px 12px;border:1px solid #d9f99d;border-radius:12px;background:#ffffff;cursor:pointer;">
+                            <input type="checkbox" name="therapyService" value="Pijat Badan Lengkap" data-service-name="Pijat Badan Lengkap" data-price="220000" onchange="updateTherapyBookingTotal('therapyBooking_el_3iasrpwu')" style="width:17px;height:17px;accent-color:#4d7c0f;flex:0 0 auto;">
+                            <span style="display:flex;flex:1;min-width:0;align-items:center;justify-content:space-between;gap:6px;flex-wrap:nowrap;">
+                                <span title="Pijat Badan Lengkap" style="min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:12px;font-weight:700;color:#365314;">Pijat Badan Lengkap</span>
+                                <strong style="flex:0 0 auto;white-space:nowrap;font-size:12px;color:#4d7c0f;">Rp 220.000</strong>
+                            </span>
+                        </label>
+                        <label style="display:flex;align-items:center;gap:8px;min-width:0;padding:10px 12px;border:1px solid #d9f99d;border-radius:12px;background:#ffffff;cursor:pointer;">
+                            <input type="checkbox" name="therapyService" value="Pijat Lulur Tradisional" data-service-name="Pijat Lulur Tradisional" data-price="240000" onchange="updateTherapyBookingTotal('therapyBooking_el_3iasrpwu')" style="width:17px;height:17px;accent-color:#4d7c0f;flex:0 0 auto;">
+                            <span style="display:flex;flex:1;min-width:0;align-items:center;justify-content:space-between;gap:6px;flex-wrap:nowrap;">
+                                <span title="Pijat Lulur Tradisional" style="min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:12px;font-weight:700;color:#365314;">Pijat Lulur Tradisional</span>
+                                <strong style="flex:0 0 auto;white-space:nowrap;font-size:12px;color:#4d7c0f;">Rp 240.000</strong>
+                            </span>
+                        </label>
+                        <label style="display:flex;align-items:center;gap:8px;min-width:0;padding:10px 12px;border:1px solid #d9f99d;border-radius:12px;background:#ffffff;cursor:pointer;">
+                            <input type="checkbox" name="therapyService" value="Pijat Kehamilan" data-service-name="Pijat Kehamilan" data-price="210000" onchange="updateTherapyBookingTotal('therapyBooking_el_3iasrpwu')" style="width:17px;height:17px;accent-color:#4d7c0f;flex:0 0 auto;">
+                            <span style="display:flex;flex:1;min-width:0;align-items:center;justify-content:space-between;gap:6px;flex-wrap:nowrap;">
+                                <span title="Pijat Kehamilan" style="min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:12px;font-weight:700;color:#365314;">Pijat Kehamilan</span>
+                                <strong style="flex:0 0 auto;white-space:nowrap;font-size:12px;color:#4d7c0f;">Rp 210.000</strong>
+                            </span>
+                        </label>
+                        <label style="display:flex;align-items:center;gap:8px;min-width:0;padding:10px 12px;border:1px solid #d9f99d;border-radius:12px;background:#ffffff;cursor:pointer;">
+                            <input type="checkbox" name="therapyService" value="Akupunktur Tubuh" data-service-name="Akupunktur Tubuh" data-price="180000" onchange="updateTherapyBookingTotal('therapyBooking_el_3iasrpwu')" style="width:17px;height:17px;accent-color:#4d7c0f;flex:0 0 auto;">
+                            <span style="display:flex;flex:1;min-width:0;align-items:center;justify-content:space-between;gap:6px;flex-wrap:nowrap;">
+                                <span title="Akupunktur Tubuh" style="min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:12px;font-weight:700;color:#365314;">Akupunktur Tubuh</span>
+                                <strong style="flex:0 0 auto;white-space:nowrap;font-size:12px;color:#4d7c0f;">Rp 180.000</strong>
+                            </span>
+                        </label>
+                        <label style="display:flex;align-items:center;gap:8px;min-width:0;padding:10px 12px;border:1px solid #d9f99d;border-radius:12px;background:#ffffff;cursor:pointer;">
+                            <input type="checkbox" name="therapyService" value="Akupunktur Wajah" data-service-name="Akupunktur Wajah" data-price="190000" onchange="updateTherapyBookingTotal('therapyBooking_el_3iasrpwu')" style="width:17px;height:17px;accent-color:#4d7c0f;flex:0 0 auto;">
+                            <span style="display:flex;flex:1;min-width:0;align-items:center;justify-content:space-between;gap:6px;flex-wrap:nowrap;">
+                                <span title="Akupunktur Wajah" style="min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:12px;font-weight:700;color:#365314;">Akupunktur Wajah</span>
+                                <strong style="flex:0 0 auto;white-space:nowrap;font-size:12px;color:#4d7c0f;">Rp 190.000</strong>
+                            </span>
+                        </label>
+                        <label style="display:flex;align-items:center;gap:8px;min-width:0;padding:10px 12px;border:1px solid #d9f99d;border-radius:12px;background:#ffffff;cursor:pointer;">
+                            <input type="checkbox" name="therapyService" value="Terapi Reposisi Tulang" data-service-name="Terapi Reposisi Tulang" data-price="250000" onchange="updateTherapyBookingTotal('therapyBooking_el_3iasrpwu')" style="width:17px;height:17px;accent-color:#4d7c0f;flex:0 0 auto;">
+                            <span style="display:flex;flex:1;min-width:0;align-items:center;justify-content:space-between;gap:6px;flex-wrap:nowrap;">
+                                <span title="Terapi Reposisi Tulang" style="min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:12px;font-weight:700;color:#365314;">Terapi Reposisi Tulang</span>
+                                <strong style="flex:0 0 auto;white-space:nowrap;font-size:12px;color:#4d7c0f;">Rp 250.000</strong>
+                            </span>
+                        </label>
+                        <label style="display:flex;align-items:center;gap:8px;min-width:0;padding:10px 12px;border:1px solid #d9f99d;border-radius:12px;background:#ffffff;cursor:pointer;">
+                            <input type="checkbox" name="therapyService" value="Ear Candle Therapy" data-service-name="Ear Candle Therapy" data-price="100000" onchange="updateTherapyBookingTotal('therapyBooking_el_3iasrpwu')" style="width:17px;height:17px;accent-color:#4d7c0f;flex:0 0 auto;">
+                            <span style="display:flex;flex:1;min-width:0;align-items:center;justify-content:space-between;gap:6px;flex-wrap:nowrap;">
+                                <span title="Ear Candle Therapy" style="min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:12px;font-weight:700;color:#365314;">Ear Candle Therapy</span>
+                                <strong style="flex:0 0 auto;white-space:nowrap;font-size:12px;color:#4d7c0f;">Rp 100.000</strong>
+                            </span>
+                        </label>
+                        <label style="display:flex;align-items:center;gap:8px;min-width:0;padding:10px 12px;border:1px solid #d9f99d;border-radius:12px;background:#ffffff;cursor:pointer;">
+                            <input type="checkbox" name="therapyService" value="Terapi Kerokan Modern" data-service-name="Terapi Kerokan Modern" data-price="95000" onchange="updateTherapyBookingTotal('therapyBooking_el_3iasrpwu')" style="width:17px;height:17px;accent-color:#4d7c0f;flex:0 0 auto;">
+                            <span style="display:flex;flex:1;min-width:0;align-items:center;justify-content:space-between;gap:6px;flex-wrap:nowrap;">
+                                <span title="Terapi Kerokan Modern" style="min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:12px;font-weight:700;color:#365314;">Terapi Kerokan Modern</span>
+                                <strong style="flex:0 0 auto;white-space:nowrap;font-size:12px;color:#4d7c0f;">Rp 95.000</strong>
+                            </span>
+                        </label>
+                        <label style="display:flex;align-items:center;gap:8px;min-width:0;padding:10px 12px;border:1px solid #d9f99d;border-radius:12px;background:#ffffff;cursor:pointer;">
+                            <input type="checkbox" name="therapyService" value="Pijat Bayi &amp; Anak" data-service-name="Pijat Bayi &amp; Anak" data-price="125000" onchange="updateTherapyBookingTotal('therapyBooking_el_3iasrpwu')" style="width:17px;height:17px;accent-color:#4d7c0f;flex:0 0 auto;">
+                            <span style="display:flex;flex:1;min-width:0;align-items:center;justify-content:space-between;gap:6px;flex-wrap:nowrap;">
+                                <span title="Pijat Bayi &amp; Anak" style="min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:12px;font-weight:700;color:#365314;">Pijat Bayi &amp; Anak</span>
+                                <strong style="flex:0 0 auto;white-space:nowrap;font-size:12px;color:#4d7c0f;">Rp 125.000</strong>
+                            </span>
+                        </label>
+                        <label style="display:flex;align-items:center;gap:8px;min-width:0;padding:10px 12px;border:1px solid #d9f99d;border-radius:12px;background:#ffffff;cursor:pointer;">
+                            <input type="checkbox" name="therapyService" value="Terapi Pemulihan Cedera" data-service-name="Terapi Pemulihan Cedera" data-price="230000" onchange="updateTherapyBookingTotal('therapyBooking_el_3iasrpwu')" style="width:17px;height:17px;accent-color:#4d7c0f;flex:0 0 auto;">
+                            <span style="display:flex;flex:1;min-width:0;align-items:center;justify-content:space-between;gap:6px;flex-wrap:nowrap;">
+                                <span title="Terapi Pemulihan Cedera" style="min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:12px;font-weight:700;color:#365314;">Terapi Pemulihan Cedera</span>
+                                <strong style="flex:0 0 auto;white-space:nowrap;font-size:12px;color:#4d7c0f;">Rp 230.000</strong>
+                            </span>
+                        </label>
+                        <label style="display:flex;align-items:center;gap:8px;min-width:0;padding:10px 12px;border:1px solid #d9f99d;border-radius:12px;background:#ffffff;cursor:pointer;">
+                            <input type="checkbox" name="therapyService" value="Paket Kombo Bekam &amp; Pijat" data-service-name="Paket Kombo Bekam &amp; Pijat" data-price="300000" onchange="updateTherapyBookingTotal('therapyBooking_el_3iasrpwu')" style="width:17px;height:17px;accent-color:#4d7c0f;flex:0 0 auto;">
+                            <span style="display:flex;flex:1;min-width:0;align-items:center;justify-content:space-between;gap:6px;flex-wrap:nowrap;">
+                                <span title="Paket Kombo Bekam &amp; Pijat" style="min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:12px;font-weight:700;color:#365314;">Paket Kombo Bekam &amp; Pijat</span>
+                                <strong style="flex:0 0 auto;white-space:nowrap;font-size:12px;color:#4d7c0f;">Rp 300.000</strong>
+                            </span>
+                        </label></div>
+                                </div>
+                            </div>
+                                </div>
+                            </fieldset>
+                            <div style="display:flex;min-width:0;justify-content:space-between;align-items:center;gap:8px;padding:11px 12px;border-radius:12px;background:#ecfccb;color:#365314;">
+                                <span title="Total harga yang harus dibayar" style="min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:12px;font-weight:700;">Total harga yang harus dibayar</span>
+                                <strong data-therapy-total aria-live="polite" style="flex:0 0 auto;white-space:nowrap;font-size:16px;color:#4d7c0f;">Rp 0</strong>
+                            </div>
+                            <p data-therapy-message role="status" aria-live="polite" style="margin:0;color:#475569;font-size:13px;"></p>
+                            <button type="submit" style="width:100%;padding:13px 18px;border:0;border-radius:10px;background:linear-gradient(135deg,#3f6212,#84cc16);color:#fff;font-size:15px;font-weight:800;cursor:pointer;">Konfirmasi Booking</button>
+                        </form>
+                    </div></div></div>
+                        </div>
+                    </section>
+<section id="section-2" class="musa-export-section " style="padding-top:40px;padding-bottom:40px;padding-left:16px;padding-right:16px;text-align:left">
+                        <div class="musa-grid-1 musa-section-grid" style="max-width:1140px;margin:0 auto;display:grid;grid-template-columns:repeat(1,minmax(0,1fr));gap:24px;">
+                            <div><div id="dom_el_dzq4gy37" class="musa-export-widget " style="padding-top:16px;padding-bottom:16px;padding-left:16px;padding-right:16px;background-color:#ffffff;text-align:left"><div class="" style="padding:22px;border-radius:16px;border:1px solid rgba(148,163,184,0.25);">
+                        <h3 style="font-size:19px;font-weight:800;margin:0 0 12px 0;color:#059669;">Tempat Praktik</h3>
+                        <div style="display:flex;flex-direction:column;gap:8px;font-size:14px;line-height:1.55;">
+                            <div>📍 <strong>Alamat:</strong> Keroya Lauk, Aikmel, Lombok Timur</div>
+                            <div>🕒 <strong>Jam Operasional:</strong> Senin – Sabtu: 08.00 – 17.00 WIB</div>
+                            <div>📱 <strong>WhatsApp / Telp:</strong> 087876042557</div>
+                        </div>
+                        <a href="https://maps.app.goo.gl/Edch6mURq6zdFGbQA" target="_blank" onclick="" style="display:inline-block;margin-top:14px;padding:9px 16px;border-radius:10px;border:1.5px solid #059669;color:#059669;font-weight:700;font-size:13px;text-decoration:none;">Buka Google Maps →</a>
+                    </div></div></div>
+                        </div>
+                    </section>
+<div id="dom_el_mqcfw52x" class="musa-export-widget " style="padding-top:0px;padding-bottom:0px;padding-left:16px;padding-right:16px;text-align:left"><section id="lokasi-maps" style="margin-top: 24px;">
+  <h3>Lokasi Praktik — KEROYA TERAPI CENTER</h3>
+  <p>
+    Dusun Keroya Lauk, Kembang Kerang, Kec. Aikmel, Kabupaten Lombok Timur, Nusa Tenggara Bar. 83653
+  </p>
+
+  <div style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px;">
+    <iframe title="Peta Lokasi KEROYA TERAPI CENTER" src="https://maps.google.com/maps?q=KEROYA%20TERAPI%20CENTER%2C%20Kembang%20Kerang%2C%20Aikmel%2C%20Lombok%20Timur&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=&amp;output=embed" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen="">
+    </iframe>
+  </div>
+
+  <p style="margin-top: 12px;">
+    <a href="https://maps.google.com/?q=KEROYA+TERAPI+CENTER+Kembang+Kerang+Aikmel+Lombok+Timur" target="_blank" rel="noopener noreferrer">
+      Buka Petunjuk Arah di Google Maps
+    </a>
+  </p>
+</section></div>
+
+                <a href="https://wa.me/6287876042557?text=Halo%20Admin%2C%20saya%20ingin%20mendaftar%20Pelatihan%20Bekam%20Sinergi%20Medis%20Bersertifikat.%20Mohon%20info%20jadwal%20dan%20ketersediaan%20kuotanya." target="_blank" rel="noopener" aria-label="Chat WhatsApp" style="position:fixed;bottom:22px;right:22px;z-index:9998;width:56px;height:56px;border-radius:999px;background:#16a34a;color:#fff;display:flex;align-items:center;justify-content:center;font-size:28px;box-shadow:0 10px 25px rgba(22,163,74,0.45);text-decoration:none;">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+                <button id="musaBackToTop" type="button" aria-label="Kembali ke atas" aria-hidden="true" tabindex="-1" style="position:fixed;right:22px;bottom:86px;z-index:9995;width:48px;height:48px;border:0;border-radius:999px;background:#059669;color:#fff;box-shadow:0 8px 24px rgba(15,23,42,.22);display:flex;align-items:center;justify-content:center;font-size:18px;cursor:pointer;opacity:0;visibility:hidden;transform:translateY(8px);pointer-events:none;transition:opacity .2s ease,transform .2s ease,visibility .2s ease;">
+                    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+                </button>
+                <script>
+                    (function(){
+                        var button = document.getElementById('musaBackToTop');
+                        if (!button) return;
+                        function updateVisibility() {
+                            var scrollTop = window.scrollY || document.documentElement.scrollTop || 0;
+                            var footer = Array.from(document.querySelectorAll('footer')).pop();
+                            var nearFooter;
+                            if (footer) {
+                                nearFooter = footer.getBoundingClientRect().top <= window.innerHeight + 140;
+                            } else {
+                                var pageHeight = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+                                nearFooter = scrollTop + window.innerHeight >= pageHeight - Math.max(300, window.innerHeight * 0.45);
+                            }
+                            var visible = scrollTop > 0 && nearFooter;
+                            button.style.opacity = visible ? '1' : '0';
+                            button.style.visibility = visible ? 'visible' : 'hidden';
+                            button.style.transform = visible ? 'translateY(0)' : 'translateY(8px)';
+                            button.style.pointerEvents = visible ? 'auto' : 'none';
+                            button.tabIndex = visible ? 0 : -1;
+                            button.setAttribute('aria-hidden', String(!visible));
+                        }
+                        button.addEventListener('click', function(){
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        });
+                        window.addEventListener('scroll', updateVisibility, { passive: true });
+                        window.addEventListener('resize', updateVisibility);
+                        updateVisibility();
+                    })();
+                </script>
+
+
+
+
+<script>
+    (function(){
+        var revEls = document.querySelectorAll('.musa-reveal-item');
+        if (revEls.length && 'IntersectionObserver' in window) {
+            revEls.forEach(function(el){ el.classList.add('musa-reveal-hidden'); });
+            var obs = new IntersectionObserver(function(entries){
+                entries.forEach(function(entry){
+                    if (entry.isIntersecting) {
+                        entry.target.classList.remove('musa-reveal-hidden');
+                        entry.target.classList.add('musa-reveal-visible');
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.12 });
+            revEls.forEach(function(el){ obs.observe(el); });
+        }
+    })();
+    window.musaOpenWhatsApp = function(phone, message) {
+        var number = String(phone || '').replace(/[^0-9]/g, '');
+        var text = String(message || '');
+        var appUrl = 'whatsapp://send' + (number ? '?phone=' + number : '?text=' + encodeURIComponent(text));
+        if (number && text) appUrl += '&text=' + encodeURIComponent(text);
+        var webUrl = number
+            ? 'https://wa.me/' + number + '?text=' + encodeURIComponent(text)
+            : 'https://wa.me/?text=' + encodeURIComponent(text);
+        var fallbackTimer = window.setTimeout(function() {
+            document.removeEventListener('visibilitychange', cancelFallback);
+            if (!document.hidden) window.location.href = webUrl;
+        }, 1500);
+        function cancelFallback() {
+            if (document.hidden) window.clearTimeout(fallbackTimer);
+        }
+        document.addEventListener('visibilitychange', cancelFallback);
+        window.location.href = appUrl;
+    };
+    document.addEventListener('click', function(event) {
+        if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+        var link = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+        if (!link) return;
+        var url = new URL(link.href);
+        var host = url.hostname.toLowerCase();
+        if (host !== 'wa.me' && host !== 'api.whatsapp.com' && host !== 'web.whatsapp.com') return;
+        event.preventDefault();
+        var number = host === 'wa.me' ? url.pathname.replace(/[^0-9]/g, '') : (url.searchParams.get('phone') || '');
+        window.musaOpenWhatsApp(number, url.searchParams.get('text') || '');
+    });
+    function selectServiceInBookingForm(serviceLabel) {
+        const selects = document.querySelectorAll('.musa-booking-service-select');
+        if (!selects.length) return;
+        selects.forEach(sel => {
+            let matched = false;
+            Array.from(sel.options).forEach(opt => {
+                if (opt.value === serviceLabel || opt.textContent === serviceLabel) { sel.value = opt.value; matched = true; }
+            });
+            if (!matched) { const o = document.createElement('option'); o.value = serviceLabel; o.textContent = serviceLabel; sel.appendChild(o); sel.value = serviceLabel; }
+        });
+        const f = selects[0].closest('form');
+        if (f) f.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+    function sendMusaFormToGoogleSheet(form, formType, extraFields) {
+        var endpoint = (form.dataset.sheetEndpoint || '').trim();
+        if (!endpoint) return;
+        var status = form.querySelector('[data-sheets-status]');
+        if (!status) {
+            status = document.createElement('p');
+            status.dataset.sheetsStatus = '1';
+            status.setAttribute('aria-live', 'polite');
+            status.style.cssText = 'margin:10px 0 0;font-size:12px;';
+            form.appendChild(status);
+        }
+        function setStatus(message, isError) {
+            status.style.color = isError ? '#dc2626' : '#475569';
+            status.textContent = message;
+        }
+        var parsedEndpoint;
+        try {
+            parsedEndpoint = new URL(endpoint);
+        } catch (error) {
+            setStatus('URL Google Sheets tidak valid.', true);
+            return;
+        }
+        if (parsedEndpoint.protocol !== 'https:' || parsedEndpoint.hostname !== 'script.google.com' || !/^\/macros\/s\/[^/]+\/exec\/?$/.test(parsedEndpoint.pathname)) {
+            setStatus('Gunakan URL Web App Google Apps Script yang berakhiran /exec.', true);
+            return;
+        }
+        var fields = {};
+        new FormData(form).forEach(function(value, key) {
+            if (typeof value === 'string') fields[key] = value;
+        });
+        Object.assign(fields, extraFields || {});
+        var payload = {
+            timestamp: new Date().toISOString(),
+            formType: formType || form.dataset.formType || 'form',
+            pageUrl: window.location.href,
+            fields: fields
+        };
+        setStatus('Mengirim data ke spreadsheet...');
+        fetch(endpoint, {
+            method: 'POST',
+            mode: 'no-cors',
+            body: new URLSearchParams({ payload: JSON.stringify(payload) })
+        }).then(function() {
+            setStatus('Permintaan dikirim. Periksa spreadsheet untuk memastikan data masuk.');
+        }).catch(function(error) {
+            console.error('Google Sheets form submission failed:', error);
+            setStatus('Data gagal dikirim. Periksa koneksi dan URL Apps Script.', true);
+        });
+    }
+    function updateTherapyBookingTotal(formId) {
+        var form = document.getElementById(formId);
+        if (!form) return;
+        var inputs = form.querySelectorAll('input[name="therapyService"]:checked');
+        var total = 0;
+        inputs.forEach(function(input) { total += Number(input.dataset.price || 0); });
+        var totalEl = form.querySelector('[data-therapy-total]');
+        if (totalEl) totalEl.textContent = 'Rp ' + new Intl.NumberFormat('id-ID').format(total);
+        var dropdownSummary = form.querySelector('[data-therapy-dropdown-summary]');
+        if (dropdownSummary) {
+            var selectedServices = Array.from(inputs);
+            dropdownSummary.textContent = selectedServices.length === 0
+                ? 'Pilih layanan'
+                : selectedServices.length <= 2
+                    ? selectedServices.map(function(input) { return input.dataset.serviceName || input.value; }).join(', ')
+                    : selectedServices.length + ' layanan dipilih';
+        }
+    }
+    function toggleTherapyServiceDropdown(formId) {
+        var form = document.getElementById(formId);
+        var options = form && form.querySelector('[data-therapy-dropdown-options]');
+        var button = form && form.querySelector('[data-therapy-dropdown-toggle]');
+        if (!options || !button) return;
+        var expanded = button.getAttribute('aria-expanded') === 'true';
+        options.style.display = expanded ? 'none' : 'block';
+        button.setAttribute('aria-expanded', String(!expanded));
+        var indicator = button.querySelector('[data-therapy-dropdown-indicator]');
+        if (indicator) indicator.textContent = expanded ? '▾' : '▴';
+    }
+    function toggleTherapyServices(formId) {
+        var form = document.getElementById(formId);
+        var content = form && form.querySelector('[data-therapy-services-content]');
+        var button = form && form.querySelector('[data-therapy-services-toggle]');
+        if (!content || !button) return;
+        var expanded = button.getAttribute('aria-expanded') === 'true';
+        content.style.display = expanded ? 'none' : 'grid';
+        button.setAttribute('aria-expanded', String(!expanded));
+        button.setAttribute('aria-label', expanded ? 'Buka daftar layanan' : 'Lipat daftar layanan');
+        button.title = expanded ? 'Buka daftar layanan' : 'Lipat daftar layanan';
+        var indicator = button.querySelector('[aria-hidden="true"]');
+        if (indicator) indicator.textContent = expanded ? '+' : '−';
+    }
+    function submitTherapyBooking(event, formId) {
+        event.preventDefault();
+        var form = document.getElementById(formId);
+        if (!form) return;
+        var inputs = form.querySelectorAll('input[name="therapyService"]:checked');
+        var services = Array.from(inputs).map(function(input) {
+            return { name: input.dataset.serviceName || input.value, price: Number(input.dataset.price || 0) };
+        });
+        var showServices = form.dataset.showServices !== '0';
+        var status = form.querySelector('[data-therapy-message]');
+        if (showServices && !services.length) {
+            if (status) {
+                status.textContent = 'Pilih minimal satu layanan terapi untuk melanjutkan.';
+                status.style.color = '#b91c1c';
+            }
+            return;
+        }
+        var nameInput = form.querySelector('[name="customerName"]');
+        nameInput.value = nameInput.value.toUpperCase();
+        var bookingCode = '';
+        if (form.dataset.enableCode === '1') {
+            var key = 'musa_therapy_booking_seq';
+            var nextSeq = parseInt(localStorage.getItem(key) || '0', 10) + 1;
+            localStorage.setItem(key, String(nextSeq));
+            var datePart = new Date().toISOString().slice(0, 10).replace(/-/g, '');
+            bookingCode = (form.dataset.prefix || 'TRP-') + datePart + '-' + String(nextSeq).padStart(3, '0');
+        }
+        var booking = {
+            bookingCode: bookingCode,
+            nama: nameInput.value.trim(),
+            alamat: form.querySelector('[name="customerAddress"]').value.trim(),
+            tanggal: form.querySelector('[name="bookingDate"]') ? form.querySelector('[name="bookingDate"]').value : '',
+            jam: form.querySelector('[name="bookingTime"]') ? form.querySelector('[name="bookingTime"]').value : '',
+            customFields: Array.from(form.querySelectorAll('[data-therapy-custom-field]'))
+                .map(function(input) { return { label: input.dataset.fieldLabel || 'Informasi Tambahan', value: input.value.trim() }; })
+                .filter(function(field) { return field.value; }),
+            services: services,
+            total: services.reduce(function(sum, service) { return sum + service.price; }, 0)
+        };
+        if (status) {
+            status.textContent = 'Data formulir berhasil disiapkan.';
+            status.style.color = '#15803d';
+        }
+        sendMusaFormToGoogleSheet(form, 'therapy_booking', {
+            bookingCode: booking.bookingCode,
+            selectedPackage: booking.services.map(function(service) {
+                return service.name + ' (Rp ' + new Intl.NumberFormat('id-ID').format(service.price) + ')';
+            }).join(', '),
+            bookingDate: booking.tanggal,
+            bookingTime: booking.jam,
+            totalPrice: booking.total,
+            customFields: JSON.stringify(booking.customFields)
+        });
+        var waNumber = (form.dataset.waNumber || '').replace(/D/g, '');
+        if (waNumber) {
+            var lines = ['Halo Admin, saya ingin ' + (showServices ? 'booking terapi:' : 'mengirim formulir:')];
+            if (booking.bookingCode) lines.push('• Kode Booking: ' + booking.bookingCode);
+            lines.push('• Nama: ' + booking.nama, '• Alamat: ' + booking.alamat);
+            if (booking.tanggal) lines.push('• Tanggal: ' + booking.tanggal);
+            if (booking.jam) lines.push('• Jam: ' + booking.jam);
+            booking.customFields.forEach(function(field) { lines.push('• ' + field.label + ': ' + field.value); });
+            if (showServices) {
+                booking.services.forEach(function(service) {
+                    lines.push('• ' + service.name + ': Rp ' + new Intl.NumberFormat('id-ID').format(service.price));
+                });
+                lines.push('• Total harga yang harus dibayar: Rp ' + new Intl.NumberFormat('id-ID').format(booking.total));
+            }
+            window.musaOpenWhatsApp(waNumber, lines.join('\n'));
+        }
+    }
+    function renderBookingReceiptImage(form, bookingData) {
+        if (form.dataset.generateReceipt !== '1') return;
+        try {
+            var oldReceipt = form.nextElementSibling;
+            if (oldReceipt && oldReceipt.matches('[data-booking-receipt], [data-booking-receipt-error]')) oldReceipt.remove();
+            var canvas = document.createElement('canvas');
+            var ctx = canvas.getContext('2d');
+            if (!ctx) throw new Error('Canvas 2D context is unavailable.');
+            canvas.width = 760;
+            var rows = [
+                ['Nama', bookingData.nama],
+                ['Paket / Kelas', bookingData.paket],
+                ['Tanggal', bookingData.tanggal],
+                ['Jam', bookingData.jam],
+                ['Catatan', bookingData.catatan]
+            ];
+            function wrapText(text, maxWidth) {
+                var words = String(text || '-').split(' ');
+                var lines = [];
+                var line = '';
+                words.forEach(function(word) {
+                    var nextLine = line ? line + ' ' + word : word;
+                    if (line && ctx.measureText(nextLine).width > maxWidth) {
+                        lines.push(line);
+                        line = word;
+                    } else {
+                        line = nextLine;
+                    }
+                });
+                if (line) lines.push(line);
+                return lines.length ? lines : ['-'];
+            }
+            ctx.font = '500 18px Arial, sans-serif';
+            var wrappedRows = rows.map(function(row) { return { label: row[0], lines: wrapText(row[1], 400) }; });
+            var totalRowsHeight = wrappedRows.reduce(function(sum, row) { return sum + row.lines.length * 28 + 18; }, 0);
+            canvas.height = 390 + totalRowsHeight;
+            var accent = window.getComputedStyle(form.querySelector('button[type="submit"]') || form).backgroundColor;
+            if (!accent || accent === 'rgba(0, 0, 0, 0)') accent = '#0d9488';
+            ctx.fillStyle = '#f1f5f9';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = '#ffffff';
+            ctx.fillRect(28, 22, 704, canvas.height - 44);
+            ctx.fillStyle = accent;
+            ctx.fillRect(28, 22, 704, 12);
+            ctx.textAlign = 'center';
+            ctx.fillStyle = '#0f172a';
+            ctx.font = '800 30px Arial, sans-serif';
+            ctx.fillText('BUKTI PENDAFTARAN', 380, 92);
+            ctx.fillStyle = '#64748b';
+            ctx.font = '500 17px Arial, sans-serif';
+            ctx.fillText('STRUK BOOKING', 380, 124);
+            ctx.setLineDash([8, 7]);
+            ctx.strokeStyle = '#cbd5e1';
+            ctx.beginPath();
+            ctx.moveTo(68, 153);
+            ctx.lineTo(692, 153);
+            ctx.stroke();
+            ctx.setLineDash([]);
+            ctx.fillStyle = '#f8fafc';
+            ctx.fillRect(68, 176, 624, 62);
+            ctx.textAlign = 'left';
+            ctx.fillStyle = '#64748b';
+            ctx.font = '700 13px Arial, sans-serif';
+            ctx.fillText('KODE BOOKING', 88, 201);
+            ctx.fillStyle = '#0f172a';
+            ctx.font = '800 22px monospace';
+            ctx.fillText(String(bookingData.bookingCode || '-'), 88, 226);
+            var y = 282;
+            wrappedRows.forEach(function(row) {
+                ctx.textAlign = 'left';
+                ctx.fillStyle = '#64748b';
+                ctx.font = '700 15px Arial, sans-serif';
+                ctx.fillText(row.label, 80, y);
+                ctx.fillStyle = '#0f172a';
+                ctx.font = '500 17px Arial, sans-serif';
+                row.lines.forEach(function(line, index) { ctx.fillText(line, 270, y + index * 27); });
+                y += row.lines.length * 27 + 18;
+            });
+            ctx.setLineDash([8, 7]);
+            ctx.strokeStyle = '#cbd5e1';
+            ctx.beginPath();
+            ctx.moveTo(68, y);
+            ctx.lineTo(692, y);
+            ctx.stroke();
+            ctx.setLineDash([]);
+            y += 34;
+            ctx.textAlign = 'center';
+            ctx.fillStyle = accent;
+            ctx.font = '800 16px Arial, sans-serif';
+            ctx.fillText('STATUS: MENUNGGU KONFIRMASI', 380, y);
+            ctx.fillStyle = '#64748b';
+            ctx.font = '500 13px Arial, sans-serif';
+            ctx.fillText('Ini bukti permintaan booking, bukan bukti pembayaran.', 380, y + 28);
+            ctx.fillText(new Date().toLocaleString('id-ID'), 380, y + 50);
+            var receipt = document.createElement('section');
+            receipt.dataset.bookingReceipt = '1';
+            receipt.setAttribute('aria-label', 'Struk booking');
+            receipt.style.cssText = 'max-width:760px;margin:18px auto;padding:16px;border:1px solid #e2e8f0;border-radius:16px;background:#fff;box-shadow:0 10px 28px rgba(15,23,42,.1);text-align:center;';
+            var title = document.createElement('h3');
+            title.textContent = 'Struk booking Anda';
+            title.style.cssText = 'margin:0 0 12px;color:#0f172a;font-size:18px;font-weight:800;';
+            var image = document.createElement('img');
+            image.src = canvas.toDataURL('image/png');
+            image.alt = 'Struk booking ' + (bookingData.bookingCode || '');
+            image.style.cssText = 'display:block;width:100%;height:auto;border-radius:8px;';
+            var download = document.createElement('a');
+            download.href = image.src;
+            download.download = 'struk-booking-' + String(bookingData.bookingCode || 'booking').replace(/[^a-z0-9_-]/gi, '-') + '.png';
+            download.textContent = 'Unduh Struk sebagai Gambar PNG';
+            download.style.cssText = 'display:inline-flex;margin-top:12px;padding:11px 18px;border-radius:10px;background:#0f172a;color:#fff;text-decoration:none;font-size:13px;font-weight:800;';
+            receipt.appendChild(title);
+            receipt.appendChild(image);
+            receipt.appendChild(download);
+            form.insertAdjacentElement('afterend', receipt);
+            receipt.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } catch (error) {
+            console.error('Booking receipt image generation failed:', error);
+            var notice = form.nextElementSibling;
+            if (!notice || !notice.hasAttribute('data-booking-receipt-error')) {
+                notice = document.createElement('p');
+                notice.dataset.bookingReceiptError = '1';
+                notice.style.cssText = 'margin:12px 0;padding:10px 12px;border:1px solid #fecaca;border-radius:8px;background:#fef2f2;color:#b91c1c;font-size:13px;';
+                form.insertAdjacentElement('afterend', notice);
+            }
+            notice.textContent = 'Struk gagal dibuat. Formulir tetap dikirim ke WhatsApp.';
+        }
+    }
+    function submitWaBookingForm(event, formId) {
+        event.preventDefault();
+        const form = document.getElementById(formId);
+        if (!form) return;
+        const fd = new FormData(form);
+        const bookingData = {
+            nama: fd.get('customerName') || '-',
+            paket: fd.get('selectedPackage') || '-',
+            tanggal: fd.get('bookingDate') || '-',
+            jam: fd.get('bookingTime') || '-',
+            catatan: fd.get('customerNote') || '-'
+        };
+        let bookingCode = '';
+        if (form.dataset.enableCode === '1') {
+            const nextSeq = (parseInt(localStorage.getItem('musa_booking_seq') || '0', 10) + 1);
+            localStorage.setItem('musa_booking_seq', String(nextSeq));
+            bookingCode = (form.dataset.prefix || 'BKM-') + new Date().toISOString().slice(0,10).replace(/-/g,'') + '-' + String(nextSeq).padStart(3,'0');
+        }
+        sendMusaFormToGoogleSheet(form, 'booking', { bookingCode: bookingCode });
+        bookingData.bookingCode = bookingCode;
+        renderBookingReceiptImage(form, bookingData);
+        let msg = (form.dataset.waTemplate || 'Halo Admin, saya ingin mendaftar:\n• Nama: *{nama}*\n• Paket: *{paket}*')
+            .replace(/\{kode_booking\}/g, bookingCode || '-')
+            .replace(/\{nama\}/g, fd.get('customerName') || '-')
+            .replace(/\{paket\}/g, fd.get('selectedPackage') || '-')
+            .replace(/\{tanggal\}/g, fd.get('bookingDate') || '-')
+            .replace(/\{jam\}/g, fd.get('bookingTime') || '-')
+            .replace(/\{catatan\}/g, fd.get('customerNote') || '-');
+        if (typeof window.musaTrackConversion === 'function') {
+            window.musaTrackConversion(null, { content_name: fd.get('selectedPackage') || 'Form Booking WA' });
+        }
+        window.musaOpenWhatsApp(form.dataset.waNumber || '', msg);
+    }
+    function moveMusaSlider(sliderId, dir) {
+        var box = document.getElementById(sliderId);
+        if (!box) return;
+        var items = box.querySelectorAll('.musa-slide-item');
+        if (!items.length) return;
+        var cur = parseInt(box.dataset.curIdx || '0', 10);
+        goMusaSlider(sliderId, (cur + dir + items.length) % items.length);
+    }
+    function goMusaSlider(sliderId, idx) {
+        var box = document.getElementById(sliderId);
+        if (!box) return;
+        var track = box.querySelector('.musa-slider-track');
+        var dots = box.querySelectorAll('.musa-slider-dot');
+        if (!track) return;
+        box.dataset.curIdx = String(idx);
+        track.style.transform = 'translateX(-' + (idx * 100) + '%)';
+        dots.forEach(function(d, i){ d.style.background = i === idx ? '#10b981' : 'rgba(255,255,255,0.5)'; });
+    }
+    setInterval(function(){
+        document.querySelectorAll('.musa-image-slider').forEach(function(box){
+            if (box.dataset.autoplay !== '1') return;
+            var intervalMs = parseInt(box.dataset.interval || '4000', 10);
+            var elapsed = parseInt(box.dataset.elapsed || '0', 10) + 1000;
+            if (elapsed >= intervalMs) { box.dataset.elapsed = '0'; moveMusaSlider(box.id, 1); }
+            else { box.dataset.elapsed = String(elapsed); }
+        });
+    }, 1000);
+    setInterval(function(){
+        document.querySelectorAll('.musa-countdown-widget').forEach(function(box){
+            if(!box.dataset.initialized){
+                var tot = (parseInt(box.dataset.days||0)*86400)+(parseInt(box.dataset.hours||0)*3600)+(parseInt(box.dataset.minutes||0)*60)+parseInt(box.dataset.seconds||0);
+                box.dataset.initialTotal = String(tot); box.dataset.remaining = String(tot); box.dataset.initialized = '1';
+            }
+            var rem = parseInt(box.dataset.remaining||'0',10);
+            rem = rem > 0 ? rem - 1 : (box.dataset.expire === 'reset' ? parseInt(box.dataset.initialTotal||'3600',10) : 0);
+            box.dataset.remaining = String(rem);
+            var d = box.querySelector('.cd-days'), h = box.querySelector('.cd-hours'), m = box.querySelector('.cd-minutes'), s = box.querySelector('.cd-seconds');
+            if(d) d.textContent = String(Math.floor(rem/86400)).padStart(2,'0');
+            if(h) h.textContent = String(Math.floor((rem%86400)/3600)).padStart(2,'0');
+            if(m) m.textContent = String(Math.floor((rem%3600)/60)).padStart(2,'0');
+            if(s) s.textContent = String(rem%60).padStart(2,'0');
+        });
+    }, 1000);
+</script>
+</body>
+</html>
